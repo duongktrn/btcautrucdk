@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiểm tra số nguyên lớn hay nhỏ hơn 0 </title>
+</head>
+<body>
+Nhập 1 số :
+<input id="id1">
+<br>
+<button onclick="check()">Kiểm tra</button>
+<br>
+<span id="result">Kết quả so sánh với 0</span>
+</body>
+</html>
+<script>
+    function check() {
+        let number = document.getElementById('id1').value
+        if(  number < 0){
+            document.getElementById('result').innerHTML = 'Số ' + parseInt(number) + ' < 0'}
+        else if( number == 0){
+            document.getElementById('result').innerHTML = 'Số ' + parseInt(number) + ' = 0'
+        }else {
+            document.getElementById('result').innerHTML = 'Số ' + parseInt(number) + ' > 0'
+        }
+    }
+</script>

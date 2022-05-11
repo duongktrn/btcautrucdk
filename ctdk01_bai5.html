@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xếp hạng học lực</title>
+</head>
+<body>
+Điểm kiểm tra : <input id="diemkt">
+<br>
+Điểm thi giữa kỳ :<input id="diemgk">
+<br>
+Điểm thi cuối kỳ :<input id="diemck">
+<br>
+<button onclick="check()">Kiểm Tra xếp loại</button>
+<br>
+<br>
+<span id="result" ></span>
+</body>
+</html>
+<script>
+    function check() {
+        let diemKT = parseInt(document.getElementById('diemkt').value)
+        let diemGK = parseInt(document.getElementById('diemgk').value)
+        let diemCK = parseInt(document.getElementById('diemck').value)
+        let diemTB = ((diemKT+diemGK+diemCK)/3).toFixed(1)
+        if (diemTB < 5){
+            document.getElementById('result').innerHTML = 'Điểm trung bình là : '+diemTB +'. Xếp loại Yếu'
+        }else if(diemTB < 6.5){
+            document.getElementById('result').innerHTML = 'Điểm trung bình là : '+diemTB +'. Xếp loại Trung Bình'
+        }else if(diemTB < 8){
+            document.getElementById('result').innerHTML = 'Điểm trung bình là : '+diemTB +'. Xếp loại Khá'
+        }else{
+            document.getElementById('result').innerHTML = 'Điểm trung bình là : '+diemTB +'. Xếp loại Giỏi'
+        }
+    }
+
+
+</script>

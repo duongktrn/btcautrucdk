@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiểm tra tuổi vào lớp 10</title>
+</head>
+<body>
+<label for="old">Nhập tuổi :</label>&nbsp;<input id="old">
+<br><br>
+<button onclick="kiemtra()">Kiểm tra</button>
+<br><br>
+<span id="result">Kết quả xét tuyển vào lớp 10 :</span>
+</body>
+</html>
+<script>
+    function kiemtra() {
+        let old = document.getElementById('old').value
+        if (old < 16){
+            document.getElementById('result').innerHTML = "bạn không đủ tuổi vào lớp 10"
+        }else {
+            document.getElementById('result').innerHTML = "bạn đủ tuổi vào lớp 10"
+        }
+    }
+</script>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chisocannang</title>
+</head>
+<body>
+<h1>Tính chỉ số cân nặng</h1>
+<label for="weight">Nhập cân nặng: (kg)</label>
+<input type="text" id="weight">
+<br><br>
+<label for="height">Nhập chiều cao: (m)</label>
+<input type="text" id="height">
+<br><br>
+<button onclick="cacl()">Kiểm Tra</button>
+<br><br><br>
+<p id="result"></p>
+</body>
+</html>
+<script>
+    function cacl() {
+        let weight = document.getElementById('weight').value
+        let height = document.getElementById('height').value
+        let bmi = weight/(height**2)
+        if (bmi < 18.5){
+            document.getElementById('result').innerHTML = "Chỉ số bmi của bạn là : " + bmi + "  .<h3>Bạn thuộc độ Underweight</h3>"
+        }
+        else if (bmi < 25){
+            document.getElementById('result').innerHTML = "Chỉ số bmi của bạn là : " + bmi + "  .<h3>Bạn thuộc độ Normal</h3>"
+        }
+        else if (bmi < 30){
+            document.getElementById('result').innerHTML = "Chỉ số bmi của bạn là : " + bmi + "  .<h3>Bạn thuộc độ Overweight</h3>"
+        }else {
+            document.getElementById('result').innerHTML = "Chỉ số bmi của bạn là : " + bmi + "  . <h3>Bạn thuộc độ Obese</h3>"
+        }
+    }
+
+
+
+</script>

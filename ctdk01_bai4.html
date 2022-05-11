@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tìm max của 3 số nguyên bất kỳ</title>
+</head>
+<body>
+số a : <input id="soA">
+<br>
+số b : <input id="soB">
+<br>
+số c : <input id="soC">
+<br>
+<button onclick="check()">Max</button>
+<br>
+<span id="result"></span>
+</body>
+</html>
+<script>
+    function check() {
+        let num1 = parseInt(document.getElementById('soA').value)
+        let num2 = parseInt(document.getElementById('soB').value)
+        let num3 = parseInt(document.getElementById('soC').value)
+        let max = num1
+        if(max < num2){
+            let max = num2
+            if(max < num3){
+                document.getElementById('result').innerHTML = 'số lớn nhất là: ' + num3
+            }else {
+                document.getElementById('result').innerHTML = 'số lớn nhất là: ' + num2
+            }
+        }else if(max < num3){
+            document.getElementById('result').innerHTML = 'số lớn nhất là: ' + num3
+        }else{
+            document.getElementById('result').innerHTML = 'số lớn nhất là: ' + num1
+        }
+    }
+
+
+</script>
